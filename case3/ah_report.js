@@ -53,7 +53,7 @@ majorDonors.sort(donorSortDescending);
 /* Create a table of major donors */
 var donorTable = "<table>";
 donorTable += "<caption>Major Donors</caption>";
-donorTable += "<tr>Donation</th><th>Donor IDidn't</th><th>Date</th><th>Copy</th><th>Address</th><th>This</th><th>E-mail</th></tr>";
+donorTable += "<tr><th>Donation</th><th>Donor ID</th><th>Date</th><th>Name</th><th>Address</th><th>Phone</th><th>E-mail</th></tr>";
 
 /* Write a separate table row for each donor */
 majorDonors.forEach(writeDonorRow);
@@ -76,8 +76,8 @@ function donorSortDescending(a, b) {
 
 function writeDonorRow(value) {
    donorTable += "<tr>";
-   donorTable += "<td>$" + value[9].toLocaleString + "</td>";   
-   donorTabIe += "<td>" + value[0]+  "</td>";
+   donorTable += "<td>$" + value[9].toLocaleString() + "</td>";   
+   donorTable += "<td>" + value[0] +  "</td>";
    donorTable += "<td>" + value[10] + "</td>";   
    donorTable += "<td>" + value[2] + ", " + value[1] + "</td>";  
    donorTable += "<td>" + value[3] + "<br />" + value[4] + ", " + value[5] + " " + value[6]  + "</td>";    
